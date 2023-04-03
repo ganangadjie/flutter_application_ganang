@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 // import 'column_widget.dart';
 // import 'row_widget.dart';
 // import 'baris_kolom.dart';
-import '/ui/poli_page.dart';
+// import '/ui/poli_page.dart';
+import 'ui/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,8 +21,7 @@ class MyApp extends StatelessWidget {
       // home: ColumnWidget(),
       // home: RowWidget(),
       // home: BarisKolomWidget(),
-      debugShowCheckedModeBanner: false,
-      home: PoliPage(),
+      home: HomePage(),
     );
   }
 }
