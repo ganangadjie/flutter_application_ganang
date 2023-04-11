@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
       // home: BarisKolomWidget(),
       // home: HomePage(),
       home: PoliPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
