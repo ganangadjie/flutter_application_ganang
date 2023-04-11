@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
 import '../model/database.dart';
 import '../model/pegawai.dart';
 import 'pegawai_item.dart';
+import 'pegawai_form.dart';
 
 class PegawaiPage extends StatefulWidget {
   const PegawaiPage({super.key});
@@ -13,7 +16,19 @@ class _PegawaiPageState extends State<PegawaiPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Data Pegawai")),
+      appBar: AppBar(
+        title: const Text("Data Pegawai"),
+        actions: [
+          GestureDetector(
+            child: const Icon(Icons.add),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => PegawaiForm()));
+            },
+          )
+        ],
+        // title: const Text("Data Pegawai")
+      ),
       body: ListView(
         children: <Widget>[
           for (Map i in pegawai) PegawaiItem(pegawai: Pegawai(i))
